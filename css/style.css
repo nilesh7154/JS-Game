@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&family=SUSE:wght@100..800&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+.body{
+    background: url("../s.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBox{
+    color: white;
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size:39px;
+    font-weight: bold;
+    font-family: "Patrick Hand";
+   
+}
+
+#highscoreBox{
+    color: red;
+    position: absolute;
+    top: 59px;
+    right: 155px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: "Patrick Hand";
+
+}
+
+#board {
+    background: url('../snakeb.jpg') no-repeat center center;
+    /* background: linear-gradient(red, yellow); */
+    background-size: cover; 
+    width: 90vmin;
+    height: 90vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+    position: relative;
+}
+
+.head {
+    position: relative; 
+    background: linear-gradient(rgb(241, 130, 130), rgb(224, 224, 117));
+    border: 2px solid purple;
+    transform: scale(1.02);
+    border-radius: 50%; 
+    
+}
+
+
+.head::before,
+.head::after {
+    content: ''; 
+    position: absolute; 
+    background-color: black; 
+    border-radius: 50%; 
+    width: 10px; 
+    height: 10px; 
+}
+
+.head::before {
+    top: 35%; 
+    left: 55%; 
+}
+
+.head::after {
+    top: 35%; 
+    right: 55%; 
+}
+
+
+.snake{
+    background-color: rgb(80, 8, 80);
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food{
+    background: linear-gradient(red,yellow);
+    border: .25vmin solid black;
+    border-radius: 8px;
+
+}
